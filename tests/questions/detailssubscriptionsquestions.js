@@ -51,8 +51,7 @@ class DetailsSubscriptionsQuestions {
          this.priceWidgetplatinum = page.locator('ecommerce-price-widget');
          this.firstEnginePlatinumMonthly = page.locator('nz-card div').filter({ hasText: 'Engine PlatinumMonthly' }).first();
    }
-
-
+   
    async DetailsFreetrialVerify() {
     await expect(this.imgDayFreeTrial).toBeVisible();
     await expect(this.headingDayFreeTrial).toBeVisible();

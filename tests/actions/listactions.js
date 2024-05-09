@@ -33,18 +33,6 @@ class ListActions {
         this.inputActions = new InputActions(page);
 
     }
-
-    async verificarCorreoConPago(id, paymentLink) {
-        // Verificar el último correo recibido en el buzón especificado
-        const latestEmail = await mailslurp.waitForLatestEmail(id, 20000, true);
-        if (latestEmail.body.includes(paymentLink)) {
-            console.log('El enlace de pago fue encontrado en el correo.');
-        } else {
-            throw new Error('El enlace de pago no fue encontrado en el correo.');
-        }
-    }
-
-
     async CompanyInformationFreetrial() {   
         // Ejecutar la tarea de suscripción completa
         await this.inputActions.fillCompanyName();
@@ -64,8 +52,6 @@ class ListActions {
         await this.page.waitForTimeout(5000);
 
     }
-
-
     async CompanyInformationSubscriptions() {   
         // Ejecutar la tarea de suscripción completa
         await this.inputActions.fillCompanyName();

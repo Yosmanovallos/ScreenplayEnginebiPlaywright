@@ -8,8 +8,6 @@ const mailslurp = new MailSlurp({ apiKey });
 
 class InputActions {
 
-    
-
      /**
      * 
      * @param {import ('@playwright/test').Page} page 
@@ -27,16 +25,30 @@ class InputActions {
 
     }
 
-
-    
     generateRandomCompanyName() {
-        const adjectives = ["Dynamic", "Innovative", "Global", "Leading", "NextGen", "Creative"];
-        const nouns = ["Solutions", "Technologies", "Systems", "Enterprises", "Holdings", "Concepts"];
-        const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
-        const noun = nouns[Math.floor(Math.random() * nouns.length)];
-        return `${adjective} ${noun}`;
+        const adjectives = [
+            "Dynamic", "Innovative", "Global", "Leading", "NextGen", "Prueba", 
+            "Turebe", "Tramee", "Trinical", "Prevelt", "Agile", "Brilliant", 
+            "Creative", "Diverse", "Efficient", "Futuristic", "Global", "HighTech"
+        ];
+        const nouns = [
+            "Solutions", "Technologies", "Systems", "Enterprises", "Holdings", 
+            "Concepts", "Trine", "Pevaar", "AWS", "Appleton", "Ventures", 
+            "Corporation", "Industries", "Services", "Network", "Innovations", 
+            "Group", "Dynamics"
+        ];
+        const suffixes = [
+            "Corp", "Inc", "Ltd", "LLC", "GmbH", "PLC", "SA", "Pvt", "Co", 
+            "AG", "BV", "SAS", "SL", "Ltd", "AB", "OY", "AS", "NV"
+        ];
+    
+        const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+        const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+        const randomSuffix = suffixes[Math.floor(Math.random() * suffixes.length)];
+        const randomNumber = Math.floor(1000 + Math.random() * 9000); // Generates a number between 1000 and 9999
+    
+        return `${randomAdjective} ${randomNoun} ${randomSuffix} ${randomNumber}`;
     }
-
 
     async fillFirstName() {
         await expect(this.firtsnamelabel).toBeVisible();
@@ -81,18 +93,12 @@ class InputActions {
         await this.city.click();
         await this.city.fill(this.testData.cityData);
     }
-
-
-
     // LOGIN inputs
-
     async fillCity() {
 
         await expect(this.city).toBeVisible();
         await this.city.click();
         await this.city.fill(this.testData.cityData);
     }
-
-
 }
 module.exports = InputActions;

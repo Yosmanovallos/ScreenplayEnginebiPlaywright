@@ -62,9 +62,7 @@ class NavigationActions {
         await expect(this.backtopricesbutton).toBeVisible();
         await this.backtopricesbutton.click();
     }
-
     // Details
-
     async DetailsFreetrial() {
         await expect(this.detailsfreetrial).toBeVisible();
         await this.detailsfreetrial.click();
@@ -88,8 +86,5 @@ class NavigationActions {
         await this.detailsplatinium.click();
         await expect(this.page).toHaveURL('https://app-qa.enginebi.net/subscription/1-engine_platinum')
     }
-
-
-
 }
 module.exports = NavigationActions;

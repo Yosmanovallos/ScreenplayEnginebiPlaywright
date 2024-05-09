@@ -7,7 +7,6 @@ test.describe('Details subscriptions verify', () => {
         const detailsQuestions = new DetailsSubscriptionsTask(page);
 
         // Ejecutar la tarea de suscripción completa
-        await detailsQuestions.DetailsVerifications();
-        
+        await detailsQuestions.DetailsVerifications();       
     });
 });
