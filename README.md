@@ -143,7 +143,7 @@ Api de correos electronicos Mailslurp para la verificacion de la llegada de corr
 
 ## Reporte-bugs
 
-La card Engine Platinum, no contiene el link de "SEE PLAN DETAILS"
+1. La card Engine Platinum, no contiene el link de "SEE PLAN DETAILS"
 
 ### Pasos para Reproducir:
 
@@ -161,6 +161,26 @@ La card del plan Engine Platinum no contiene el link de "SEE PLAN DETAILS".
 
 ![image](https://github.com/Yosmanovallos/ScreenplayEnginebiPlaywright/assets/119948396/46ff947d-52a4-494e-9869-9574f2fdc2d1)
 
+2. Los correos estan tardando en llegar, cuando se compran varias subscripciones al mismo tiempo"
+
+### Pasos para Reproducir:
+
+1. Go to QA.
+2. In https://app-qa.enginebi.net/subscription/0-plans.
+3. Run the automated test (Free trial Subscription)
+4. verify the id and email that generate the automated test
+5. check the mail generate for the automated test for the (Free trial Subscription)
+
+### Comportamiento Esperado:
+
+Al correr la prueba automatizada y que verifique el id del buzon que llegue el mail con la confirmacion de la compra.
+![image](https://github.com/Yosmanovallos/ScreenplayEnginebiPlaywright/assets/119948396/219886e5-9976-443c-9685-64ddbbe6c896)
+![image](https://github.com/Yosmanovallos/ScreenplayEnginebiPlaywright/assets/119948396/3cf3e8b1-98bc-47c7-85fe-5d26d330e9fb)
+
+
+### Comportamiento Observado:
+
+Se esta tardando demasiado en llegar el correo para la verificacion de el mail para la confirmacion de la subscripcion, los tiempo sobrepasan los minutos y rompe las pruebas automatizadas.
 
 
 
