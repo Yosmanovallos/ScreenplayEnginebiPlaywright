@@ -1,6 +1,6 @@
 const { expect } = require('@playwright/test');
 const qaTestData = require('../actors/prod.json');
-const prodTestData = require('../actors/qa.json')
+const prodTestData = require('../actors/qa.json');
 
 class NavigationActions {
 

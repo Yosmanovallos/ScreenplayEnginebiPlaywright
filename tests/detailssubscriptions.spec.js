@@ -8,6 +8,6 @@ test.describe('Details subscriptions verify', () => {
 
         // Ejecutar la tarea de suscripción completa
         await detailsQuestions.DetailsVerifications();
-
+        
     });
 });

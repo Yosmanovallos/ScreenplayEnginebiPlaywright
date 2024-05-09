@@ -12,6 +12,8 @@
     "@types/node": "^20.12.11"
   },
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "@faker-js/faker": "^8.4.1",
+    "dotenv": "^16.4.5",
+    "mailslurp-client": "^15.20.2"
   }
 }

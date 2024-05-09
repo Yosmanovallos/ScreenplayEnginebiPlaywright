@@ -3,8 +3,10 @@
     "qaTestData":{
         "firtsNamedata":"Yosman Andres",
         "lastNamedata":"Ovallos Melo",
-        "emailData":"yosmanandresom@yopmail.com",
-        "phoneNumber":"8885618349"
+        "emailData":"pruebaqa3@yopmail.com",
+        "phoneNumber":"8885618349",
+        "companyNamedata":"Apple",
+        "cityData":"Miami"
     }
 
 }
