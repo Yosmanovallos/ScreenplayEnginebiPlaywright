@@ -5,6 +5,7 @@ const NavigationActions = require('../actions/navigationactions');
 const InputActions = require('../actions/inputactions');
 
 
+
 class ListActions {
 
      /**
@@ -33,7 +34,40 @@ class ListActions {
 
     }
 
-    async CompanyInformation() {   
+    async verificarCorreoConPago(id, paymentLink) {
+        // Verificar el último correo recibido en el buzón especificado
+        const latestEmail = await mailslurp.waitForLatestEmail(id, 20000, true);
+        if (latestEmail.body.includes(paymentLink)) {
+            console.log('El enlace de pago fue encontrado en el correo.');
+        } else {
+            throw new Error('El enlace de pago no fue encontrado en el correo.');
+        }
+    }
+
+
+    async CompanyInformationFreetrial() {   
+        // Ejecutar la tarea de suscripción completa
+        await this.inputActions.fillCompanyName();
+        await this.monthlist.click();
+        await this.monthlistchose.click();
+        await this.accountingsoftware.click();
+        await this.accountingsoftwarechoose.click();
+        await this.countrylist.click();
+        await this.countrylistchoose.click();
+        await this.statelist.click();
+        await this.statelistchoose.click();
+        await this.inputActions.fillCity();
+        await this.currency.click();
+        await this.currencychoose.click();
+        await this.termsandconditions.click();
+        await this.navigationActions.clickNextButton();
+        await this.page.waitForTimeout(5000);
+
+    }
+
+
+    async CompanyInformationSubscriptions() {   
+        // Ejecutar la tarea de suscripción completa
         await this.inputActions.fillCompanyName();
         await this.monthlist.click();
         await this.monthlistchose.click();

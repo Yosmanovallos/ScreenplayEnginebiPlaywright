@@ -1,15 +1,31 @@
 require('dotenv').config();
 const { test } = require('@playwright/test');
 const { SubscribeTask } = require('./tasks/subscriptionstask');
+const { MailSlurp } = require('mailslurp-client');
+
+const apiKey = process.env.API_KEY;
+const mailslurp = new MailSlurp({ apiKey });
 
 test.describe('Subscription Page Tests', () => {
-    test('User can subscribe to a basic plan', async ({ page }) => {
+    test('Free trial Subscriptions', async ({ page }) => {
+        
         const subscribeTask = new SubscribeTask(page);
-
-        // Ejecutar la tarea de suscripción completa
         await subscribeTask.SubscrtiptionFreeTrialTask();
-
-        // Aquí puedes añadir aserciones adicionales para verificar el resultado de la suscripción
-        // Por ejemplo, comprobar que se ha llegado a una página de confirmación, etc.
     });
+
+    test('Monthly subscriptions', async ({ page }) => {
+        const subscribeTask = new SubscribeTask(page);
+        await subscribeTask.SubscrtiptionMonthlyTask();
+    });
+
+    test('Annual subscriptions', async ({ page }) => {
+        const subscribeTask = new SubscribeTask(page);
+        await subscribeTask.SubscrtiptionAnnualTask();
+    });
+
+    test('Platinum subscriptions', async ({ page }) => {
+        const subscribeTask = new SubscribeTask(page);
+        await subscribeTask.SubscrtiptionPlatinumTask();
+    });
+
 });

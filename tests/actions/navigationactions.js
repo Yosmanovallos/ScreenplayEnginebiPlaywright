@@ -18,8 +18,12 @@ class NavigationActions {
         this.detailsannual = page.locator('nz-card-meta').filter({ hasText: 'AnnualAgency Specific' }).locator('a')
         this.detailsplatinium = page.locator('div:nth-child(2) > .PriceColumn-priceContainer > div > div');
         this.backtopricesbutton = page.getByRole('button', { name: 'Back to Prices' });
+        this.subscribebuttonmonthly = page.locator('nz-card-meta').filter({ hasText: 'MonthlyAgency Specific' }).getByRole('button');
+        this.subscribebuttonannual = page.locator('nz-card-meta').filter({ hasText: 'AnnualAgency Specific' }).getByRole('button');
+        this.subscribebuttonplatinum = page.locator('nz-card-meta').filter({ hasText: 'Engine PlatinumMonthly' }).getByRole('button');
         this.testData = process.env.ENV === 'qa' ? qaTestData.qaTestData : prodTestData.prodTestData;
-
+        this.pricefourthausen = page.locator('ecommerce-price-box').filter({ hasText: 'BEST DEAL $4,860 00 paid up' });
+        this.subscribebutton = page.getByRole('button', { name: 'SUBSCRIBE' });
     }
 
     async goto() {
@@ -30,6 +34,24 @@ class NavigationActions {
         await expect(this.startnowbutton).toBeVisible();
         await this.startnowbutton.click();
     }
+
+    async clickSubscribeNowButtonMonthly() {
+        await expect(this.subscribebuttonmonthly).toBeVisible();
+        await this.subscribebuttonmonthly.click();
+    }
+
+    async clickSubscribeNowButtonAnnual() {
+        await expect(this.subscribebuttonannual).toBeVisible();
+        await this.subscribebuttonannual.click();
+    }
+
+    async clickSubscribeNowButtonPlaytinum() {
+        await expect(this.subscribebuttonplatinum).toBeVisible();
+        await this.subscribebuttonplatinum.click();
+        await this.pricefourthausen.click();
+        await this.subscribebutton.click();
+    }
+
 
     async clickNextButton() {
         await expect(this.nextbutton).toBeVisible();

@@ -54,7 +54,8 @@ class InputActions {
     async fillEmailAddress() {
 
         const { emailAddress, id } = await mailslurp.createInbox();
-
+        console.log(`Correo generado: ${emailAddress}`);
+        console.log(`ID generado: ${id}`);
         await expect(this.emailaddresslabel).toBeVisible();
         await this.emailaddresslabel.click();
         await this.emailaddresslabel.fill(emailAddress);
@@ -73,6 +74,17 @@ class InputActions {
         await this.comapanyname.click();
         await this.comapanyname.fill(randomCompanyName);
     }
+
+    async fillCity() {
+
+        await expect(this.city).toBeVisible();
+        await this.city.click();
+        await this.city.fill(this.testData.cityData);
+    }
+
+
+
+    // LOGIN inputs
 
     async fillCity() {
 
