@@ -8,6 +8,7 @@ Este proyecto utiliza **Playwright** junto con **Screenplay**, **JavaScript** y 
 - [Uso](#uso)
 - [Estructura del Proyecto](#estructura-del-proyecto)
 - [Funciones Principales](#funciones-principales)
+- [Reporte de Bugs](#Reporte-bugs)
 
 ## Instalación
 1. Clona el repositorio:
@@ -137,4 +138,39 @@ Variables de entorno del ambiente de pruebas
 Api de correos electronicos Mailslurp para la verificacion de la llegada de correos y la creacion de usuarios con diferentes correos electronicos
 
 ![image](https://github.com/Yosmanovallos/ScreenplayEnginebiPlaywright/assets/119948396/caeb3de8-eb46-4ac8-9793-6fdf6c62e4ff)
+
+
+
+## Reporte-bugs
+
+La card Engine Platinum, no contiene el link de "SEE PLAN DETAILS"
+
+### Pasos para Reproducir:
+
+1. Go to QA.
+2. In https://app-qa.enginebi.net/subscription/0-plans.
+3. Verify the card Engine planinum.
+
+### Comportamiento Esperado:
+
+La card del plan Engine Platinum debe incluir un link visible y funcional con el texto "SEE PLAN DETAILS".
+
+### Comportamiento Observado:
+
+La card del plan Engine Platinum no contiene el link de "SEE PLAN DETAILS".
+
+![image](https://github.com/Yosmanovallos/ScreenplayEnginebiPlaywright/assets/119948396/46ff947d-52a4-494e-9869-9574f2fdc2d1)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
