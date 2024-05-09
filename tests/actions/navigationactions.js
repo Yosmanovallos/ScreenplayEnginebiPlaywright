@@ -16,8 +16,8 @@ class NavigationActions {
         this.testData = process.env.ENV === 'qa' ? qaTestData.qaTestData : prodTestData.prodTestData;
 
     }
-
-    async goToSubscriptionPage() {
+    
+    async goto() {
         await this.page.goto(process.env.URL);
     }
 

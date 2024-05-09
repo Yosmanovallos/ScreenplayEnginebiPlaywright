@@ -1,8 +1,9 @@
 const NavigationActions = require('../actions/navigationactions');
 const InputActions = require('../actions/inputactions');
+const HomePageVerifyQuestions = require('../questions/homepagequestions')
 
 
-exports.SubscribeTask = class SubscribeTask {
+exports.HomePageVerifyTask = class HomePageVerifyTask {
     /**
      * @param {import('@playwright/test').Page} page
      */
@@ -10,17 +11,11 @@ exports.SubscribeTask = class SubscribeTask {
         this.page = page;
         this.navigationActions = new NavigationActions(page);
         this.inputActions = new InputActions(page);
+        this.homepageQuestions = new HomePageVerifyQuestions(page);
     }
 
-    async execute() {
+    async VerifyHomePage() {
         await this.navigationActions.goto();
-        await this.navigationActions.clickStartNowButton();
-        
-        await this.inputActions.fillFirstName();
-        await this.inputActions.fillLastName();
-        await this.inputActions.fillEmailAddress();
-        await this.inputActions.fillBusinessPhoneNumber();
-        
-        await this.navigationActions.clickNextButton();
+        await this.homepageQuestions.verifyComponentsVisibility();
     }
 }
