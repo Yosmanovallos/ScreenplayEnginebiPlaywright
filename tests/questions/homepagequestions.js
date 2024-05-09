@@ -2,7 +2,6 @@ const qaTestData = require('../actors/qa.json');
 const prodTestData = require('../actors/prod.json');
 const { test, expect } = require('@playwright/test')
 
-
 class HomePageVerifyQuestions {
     /**
     * 
