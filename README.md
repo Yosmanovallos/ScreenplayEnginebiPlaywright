@@ -8,8 +8,6 @@ Este proyecto utiliza **Playwright** junto con **Screenplay**, **JavaScript** y 
 - [Uso](#uso)
 - [Estructura del Proyecto](#estructura-del-proyecto)
 - [Funciones Principales](#funciones-principales)
-- [Contribución](#contribución)
-- [Licencia](#licencia)
 
 ## Instalación
 1. Clona el repositorio:
@@ -117,8 +115,26 @@ El projecto esta basado en el design pattern Screenplay
 ![image](https://github.com/Yosmanovallos/ScreenplayEnginebiPlaywright/assets/119948396/2d39f011-3138-4b5e-8b4b-b70b7dbdece6)
 
 
+## funciones-principales
+
+Creacion de Companys random
+
+generateRandomCompanyName() {
+        const adjectives = ["Dynamic", "Innovative", "Global", "Leading", "NextGen", "prueba", "turebe", "tramee", "trinical", "prevelt"];
+        const nouns = ["Solutions", "Technologies", "Systems", "Enterprises", "Holdings", "Concepts", "trine", "pevaar", "AWS", "applelton"];
+        const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+        const noun = nouns[Math.floor(Math.random() * nouns.length)];
+        return `${adjective} ${noun}`;
+    }
+
+
+Variables de entorno del ambiente de pruebas
+
+![image](https://github.com/Yosmanovallos/ScreenplayEnginebiPlaywright/assets/119948396/169eb1ec-63be-4372-af00-e96c78520851)
 
 
 
+Api de correos electronicos Mailslurp para la verificacion de la llegada de correos y la creacion de usuarios con diferentes correos electronicos
 
+![image](https://github.com/Yosmanovallos/ScreenplayEnginebiPlaywright/assets/119948396/caeb3de8-eb46-4ac8-9793-6fdf6c62e4ff)
 
