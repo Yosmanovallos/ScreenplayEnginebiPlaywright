@@ -43,7 +43,7 @@ Step5: Generate Allure Report
 
 
 
-## Uso
+## usage
 
 1. Playwright Report
 
@@ -72,7 +72,7 @@ npx allure serve allure-results
 ![image](https://github.com/Yosmanovallos/ScreenplayEnginebiPlaywright/assets/119948396/28adfb59-b74c-435a-9f68-86ee8ee5195a)
 
 
-## estructura-del-proyecto
+## project-structure
 
 The project is based on the Screenplay design pattern.
 
