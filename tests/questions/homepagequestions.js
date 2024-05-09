@@ -44,7 +44,6 @@ class HomePageVerifyQuestions {
          this.buttonPlatinum = page.locator('nz-card-meta').filter({ hasText: 'Engine PlatinumMonthly' }).getByRole('button');
    }
 
-
    async verifyComponentsVisibility() {
     // Verificaciones de visibilidad de logos, textos y botones principales
     await this.page.waitForTimeout(3000)

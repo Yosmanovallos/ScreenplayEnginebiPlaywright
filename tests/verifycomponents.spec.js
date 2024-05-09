@@ -8,8 +8,5 @@ test.describe('Verify components HomePage', () => {
 
         // Ejecutar la tarea de suscripción completa
         await homepageQuestions.VerifyHomePage();
-
-        // Aquí puedes añadir aserciones adicionales para verificar el resultado de la suscripción
-        // Por ejemplo, comprobar que se ha llegado a una página de confirmación, etc.
     });
 });
